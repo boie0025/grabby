@@ -2,9 +2,9 @@ require 'numbers_and_words'
 
 class Array
 
-  attr_writer :max_ordinal_number
-
   class << self
+    attr_writer :max_ordinal_number
+
     def ordinal_words_array
       word_array = ordinal_range_array.to_words ordinal: true
       word_array.map { |word| word.gsub ?-, ?_ }
